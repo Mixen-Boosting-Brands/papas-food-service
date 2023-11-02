@@ -11,14 +11,41 @@
             padding-right: 0;
             padding-left: 0;
         }
+
+        .preventivo {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .mobile {
+            background: url('./assets/images/mobile.jpg') cover no-repeat;
+        }
+
+        .desktop {
+            background: url('./assets/images/desktop.jpg') cover no-repeat;
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .mobile {
+                display: none;
+            }
+
+            .desktop {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center">
-                <img src="./assets/images/mobile.jpg" alt="" class="d-md-none img-fluid">
-                <img src="./assets/images/desktop.jpg" alt="" class="d-none d-md-block img-fluid">
+                <div class="mobile"></div>
+                <div class="desktop"></div>
             </div>
         </div>
     </div>
